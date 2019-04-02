@@ -1,0 +1,13 @@
+{% extends "admin/base.html" %}
+
+{% block title %}
+    {{ title }} | {{ site_title|default:_('Django site admin') }}
+{% endblock %}
+{##}
+{% block branding %}
+    <h1 id="site-name"><a href="{% url 'admin:index' %}">系统管理</a></h1>
+{% endblock %}
+{##}
+{#{% block content_title %}{% if title %}<h1>数据管理</h1>{% endif %}{% endblock %}#}
+
+{% block nav-global %}{% endblock %}

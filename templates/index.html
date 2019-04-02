@@ -1,0 +1,64 @@
+{% extends "admin/base_site.html" %}
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'admin/css/base.css' %}">
+{% block branding %}
+    <h1 id="site-name"><a href="{% url 'admin:index' %}">物理服务器列表</a></h1>
+{% endblock %}
+{% block content_title %}{% if title %}<h1>数据管理</h1>{% endif %}{% endblock %}
+{% block content %}
+    <table>
+        <thead>
+        <tr>
+            <th scope="col" class="action-checkbox-column"><input type="checkbox" id="action-toggle"></th>
+            <th class="sortable">ID</th>
+            <th>IP</th>
+            <th>用户名</th>
+            <th>密码</th>
+            <th>主机名</th>
+            <th>主机类型</th>
+            <th>CPU核心</th>
+            <th>物理CPU数量</th>
+            <th>CPU其他信息</th>
+            <th>硬盘信息</th>
+            <th>内存信息</th>
+            <th>上线时间</th>
+            <th>启用时间</th>
+            <th>结束时间</th>
+            <th>弃用时间</th>
+            <th>操作系统</th>
+            <th>所属部门</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for list in lists %}
+            <tr>
+                <td class="action-checkbox">
+                  <input type="checkbox" name="_selected_action" class="action-select">
+{#                    <input type="checkbox" name="checkbox">#}
+                </td>
+                <td>{{ list.id }}</td>
+                <td>{{ list.ip }}</td>
+                <td>{{ list.username }}</td>
+                <td>{{ list.password }}</td>
+                <td>{{ list.hostname }}</td>
+                {% if list.type == '1' %}
+                    <td>物理机</td>
+                {% elif list.type == '2' %}
+                    <td>VMWARE</td>
+                {% endif %}
+                <td>{{ list.cpucore }}</td>
+                <td>{{ list.cpunum }}</td>
+                <td>{{ list.cpuother }}</td>
+                <td>{{ list.disksize }}</td>
+                <td>{{ list.memsize }}</td>
+                <td>{{ list.createtime }}</td>
+                <td>{{ list.starttime }}</td>
+                <td>{{ list.endtime }}</td>
+                <td>{{ list.destroytime }}</td>
+                <td>{{ list.os }}</td>
+                <td>{{ list.department.name }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
