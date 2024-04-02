@@ -69,5 +69,5 @@ def collect(ip, user, passwd):
 
 
 if __name__ == "__main__":
-    print collect('120.78.184.217', 'root', 'ipanel123')
-    print collect('94.191.79.133', 'root', 'ipanel123')
+    print collect('120.78.184.212', 'root', 'xxxxx')
+    print collect('94.191.79.233', 'root', 'xxxxx')
