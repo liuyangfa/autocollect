@@ -125,7 +125,7 @@ STATICFILES_DIRS = (
 )
 
 BROKER_URL = 'amqp://guest@localhost//'
-# BROKER_URL = 'amqp://admin:ipanel123@192.168.116.129//'
+# BROKER_URL = 'amqp://admin:xxxxxxxxxxxx@192.168.116.129//'
 CELERY_RESULT_BACKEND = 'djcelery.backends.database:DatabaseBackend'
 CELERYBEAT_SCHEDULER = 'djcelery.schedulers.DatabaseScheduler'
 # CELERY_ACCEPT_CONTENT = ['json']
