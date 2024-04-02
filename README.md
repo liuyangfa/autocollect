@@ -38,7 +38,7 @@ assetManage]# python manage.py runserver 0.0.0.0:8000
 #### 创建管理员用户
 
 ```bash
-assetManage]# python manage.py  createsuperuser --email liuyangfa@juzix.net --username admin 
+assetManage]# python manage.py  createsuperuser --email xxxx@qq.com --username admin 
 ```
 
 #### 异步任务进程
