@@ -199,7 +199,7 @@ class Esxi(object):
 
 
 if __name__ == '__main__':
-    esxi = Esxi(address='192.168.9.115', user='administrator@vsphere.juzix', password='Juzhen123!')
+    esxi = Esxi(address='192.168.111.115', user='administrator@vsphere.xx', password='test1123123!')
     # print(esxi.get_vms_by_ip('192.168.9.8'))
     # hosts = esxi.gethosts()
     # for host in hosts:
